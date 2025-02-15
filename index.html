@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC505 Lab 6 - Enhanced Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header> <!-- Header Section -->
+        <h1>Interactive Holy Grail Layout</h1>
+    </header>
+    <div class="container">
+        <aside class="menu">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </aside>
+        <main class="content"> <!-- Main Content Section -->
+            <h2>Try Our Number Magic!</h2>
+            <label for="numberInput">Enter a number:</label>
+            <input type="number" id="numberInput" placeholder="Enter any nu
+mber">
+            <button id="processButton">Get Fun Fact</button>
+            <p id="responseText"></p>
+        </main>
+        <aside class="ad"> <!-- Advertisement Section -->
+            <a href="https://www.amazon.com/" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/0
+6/Amazon-Logo.png" alt="Advertisement">
+            </a>
+        </aside>
+    </div>
+    <footer>
+        <p>Last updated:
+            <span id="lastModified"></span>
+        </p>
+        <h2>Addendum</h2>
+        <p><strong>Problem Solved:</strong> In this assignment, I created a
+            web page with a random "fun fact" generator in the main content area. The f
+            eature, triggered by a button click, was developed with JavaScript and uses
+            an array of facts to display one randomly each time the button is pressed.
+            This interactive element helps demonstrate how JavaScript can enhance user
+            engagement within a structured HTML and CSS layout.</p>
+        <p><strong>Solution Approach:</strong>
+        <ul>
+            <li><strong>HTML Structure:</strong> I used HTML5 semantic elem
+                ents to create a structured page layout following the Holy Grail Layout des
+                ign. Each section—header, sidebar, main content, advertisement, and footer—
+                is clearly defined for easy maintenance and readability.</li>
+            <li><strong>CSS Styling with Grid Layout:</strong> The layout w
+                as constructed using CSS Grid, providing flexibility and ensuring all secti
+                ons align consistently across different screen sizes. CSS properties were a
+                djusted to maintain proportional scaling, particularly for the advertisemen
+                t section, to ensure it remains visually balanced within the layout.</li>
+            <li><strong>JavaScript Interactivity:</strong> I used JavaScrip
+                t to add a "Get Fun Fact" button, which fetches a random fact from an array
+                . Each button click triggers an event listener to update the displayed text
+                dynamically, allowing users to engage with the page interactively.</li>
+            <li><strong>Footer with Last Modified Script:</strong> I added
+                a script in the footer to automatically display the date the page was last
+                updated, as required by the assignment.</li>
+        </ul>
+        </p>
+        <p><strong>Challenges and Solutions:</strong>
+        <ul>
+            <li><strong>Image Sizing for Advertisement:</strong> Initially,
+                the advertisement image was too large and disrupted the layout. To solve th
+                is, I limited its size using CSS `max-width` and `height` properties to ens
+                ure it scales appropriately within the grid layout.</li>
+            <li><strong>JavaScript Event Listener Issue:</strong> When I fi
+                rst added the JavaScript button functionality, the event listener didn’t wo
+                rk as expected. The issue was due to the script loading before the DOM was
+                fully available. Adding the `defer` attribute to the script tag ensured tha
+                t the script waited for the DOM to load, resolving the issue.</li>
+            <li><strong>Responsive Design Adjustments:</strong> Making the
+                layout responsive required several adjustments, especially for the sidebar
+                and advertisement sections. Media queries and CSS Grid adjustments were use
+                d to maintain consistent alignment across screen sizes.</li>
+        </ul>
+        </p>
+        <script type="text/javascript">
+            var x = document.lastModified;
+            document.getElementById('lastModified').textContent = x;
+        </script>
+    </footer>
+    <script type="text/javascript">
+        // JavaScript to display the last modified date in the footer
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastModified = document.lastModified;
+            document.getElementById('lastModified').textContent = lastModif
+            ied;
+        });
+    </script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<script src="script.js"></script>
+<script>
+    document.getElementById('lastModified').textContent = document.last
+    Modified;
+</script>
+</body>
+
+</html>

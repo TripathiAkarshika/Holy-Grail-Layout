@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-gap: 10px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "sidebar content ad";
+    gap: 10px;
+    padding: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1em;
+}
+
+.content {
+    grid-area: content;
+    padding: 1em;
+}
+
+.content input,
+.content button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.ad {
+    grid-area: ad;
+    text-align: center;
+}
+
+footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 1em;
+}
+
+.menu {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-right: 1px solid #ddd;
+}
+
+.menu h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+.ad {
+    text-align: center;
+    /* Center the image within the ad section */
+    padding: 10px;
+}
+
+.ad img {
+    max-width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 200px;
+    /* Set a maximum height to keep the image from being
+    too large */
+    width: auto;
+    border: 1px solid #ddd;
+    /* Optional: add a border around the image */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+}
